@@ -8,11 +8,10 @@ h1{
   text-align:center;
 }
 h4{
-  color:#c0c0c0;
+  color:#c0c0c0;/* grey color*/
 }
 input {
-  position: absolute;
-  opacity: 0;
+ display: none;
 }
 
 .tab {
@@ -21,44 +20,38 @@ input {
   overflow: hidden;
 }
 .label {
-  display: -webkit-box;
   display: flex;
-  -webkit-box-pack: justify;
   justify-content: space-between;
   padding: 1em;
-  background: #2222ac;
+  background: #2222ac;/* darkblue color*/
   font-weight: bold;
-  cursor: pointer;
 }
 
 .label:hover {
-  background: #8080ff;
+  background: #8080ff;/* lightblue color*/
 }
 .label::after {
   content: "\276F";
   width: 1em;
   height: 1em;
-  text-align: center;
-  -webkit-transition: all .35s;
   transition: all .35s;
 }
 .content {
   max-height: 0;
   padding: 0 1em;
   color: #2c3e50;
-  background: #c0c0c0;
-  -webkit-transition: all .35s;
+  background: #c0c0c0;/* grey color*/
   transition: all .35s;
 }
 
 input:checked + .label {
-  background: #8080ff;
+  background: #8080ff;/* lightblue color*/
 }
 input:checked + .label::after {
-  -webkit-transform: rotate(90deg);
-          transform: rotate(90deg);
+  transform: rotate(90deg);
 }
-input:checked ~ .content {
+input:checked ~ .content
+{
   max-height: 100vh;
   padding: 1em;
 }
